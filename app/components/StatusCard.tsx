@@ -223,10 +223,10 @@ export default function StatusCard({ result, onRetry }: StatusCardProps) {
                 className="rounded p-3"
                 style={{ background: 'rgba(0,0,0,0.4)', border: '1px solid #2a4a2a' }}
               >
-                <p className="text-rpg-dim mb-2" style={{ fontSize: '7px' }}>
+                <p className="text-rpg-dim mb-2" style={{ fontSize: '9px' }}>
                   ⚔ 装備
                 </p>
-                <p className="text-rpg-text leading-loose" style={{ fontSize: '8px' }}>
+                <p className="text-rpg-text leading-loose" style={{ fontSize: '13px', lineHeight: '2' }}>
                   {result.equipment}
                 </p>
               </div>
@@ -234,12 +234,12 @@ export default function StatusCard({ result, onRetry }: StatusCardProps) {
                 className="rounded p-3"
                 style={{ background: 'rgba(0,0,0,0.4)', border: '1px solid #4a1a1a' }}
               >
-                <p className="text-rpg-dim mb-2" style={{ fontSize: '7px' }}>
+                <p className="text-rpg-dim mb-2" style={{ fontSize: '9px' }}>
                   ☠ 弱点
                 </p>
                 <p
                   className="leading-loose"
-                  style={{ fontSize: '8px', color: '#ff5252' }}
+                  style={{ fontSize: '13px', lineHeight: '2', color: '#ff5252' }}
                 >
                   {result.weakness}
                 </p>
@@ -254,12 +254,12 @@ export default function StatusCard({ result, onRetry }: StatusCardProps) {
                 border: '1px solid #c8a850',
               }}
             >
-              <p className="text-rpg-dim mb-2" style={{ fontSize: '7px' }}>
+              <p className="text-rpg-dim mb-2" style={{ fontSize: '9px' }}>
                 💬 賢者の一言
               </p>
               <p
                 className="text-rpg-text leading-loose"
-                style={{ fontSize: '9px', lineHeight: '2' }}
+                style={{ fontSize: '13px', lineHeight: '2.2' }}
               >
                 {result.comment}
               </p>

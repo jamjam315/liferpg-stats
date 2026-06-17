@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --rpg-bg: #0a0a1a;
+  --rpg-panel: #0d1b2a;
+  --rpg-border: #c8a850;
+  --rpg-gold: #ffd700;
+  --rpg-text: #e8d5a3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--rpg-bg);
+  color: var(--rpg-text);
+  font-family: 'Press Start 2P', monospace;
+  min-height: 100vh;
+}
+
+/* RPG Window style */
+.rpg-window {
+  background: linear-gradient(180deg, #0d1b2a 0%, #071020 100%);
+  border: 3px solid #c8a850;
+  box-shadow:
+    0 0 0 1px #7a5a10,
+    inset 0 0 0 1px #7a5a10,
+    0 8px 32px rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+.rpg-window::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: 1px solid rgba(200, 168, 80, 0.3);
+  pointer-events: none;
+}
+
+/* Corner decorations */
+.rpg-corner::before,
+.rpg-corner::after {
+  content: '◆';
+  position: absolute;
+  color: #c8a850;
+  font-size: 10px;
+  line-height: 1;
+}
+
+/* Stat bars */
+.stat-bar {
+  height: 12px;
+  background: #0a1a0a;
+  border: 1px solid #2a4a2a;
+  overflow: hidden;
+  image-rendering: pixelated;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  transition: width 0.8s ease-out;
+  position: relative;
+}
+
+.stat-bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  right: 4px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Option button */
+.option-btn {
+  background: linear-gradient(180deg, #0d1b2a 0%, #070f1a 100%);
+  border: 2px solid #2a4a7a;
+  color: #a0c4e8;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  line-height: 1.8;
+  text-align: left;
+  padding: 12px 16px;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.option-btn::before {
+  content: '▷ ';
+  color: #2a4a7a;
+  transition: color 0.15s;
+}
+
+.option-btn:hover {
+  border-color: #ffd700;
+  background: linear-gradient(180deg, #1a2a0a 0%, #0f1f05 100%);
+  color: #ffd700;
+  transform: translateX(4px);
+}
+
+.option-btn:hover::before {
+  content: '▶ ';
+  color: #ffd700;
+}
+
+.option-btn.selected {
+  border-color: #00e676;
+  background: linear-gradient(180deg, #0a2a0a 0%, #051505 100%);
+  color: #00e676;
+}
+
+.option-btn.selected::before {
+  content: '▶ ';
+  color: #00e676;
+}
+
+/* Progress dots */
+.progress-dot {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #c8a850;
+  display: inline-block;
+}
+
+.progress-dot.active {
+  background: #ffd700;
+  box-shadow: 0 0 6px #ffd700;
+}
+
+.progress-dot.done {
+  background: #c8a850;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #c8a850;
+}
+
+/* Cursor blink for text */
+.cursor-blink::after {
+  content: '█';
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Scanline overlay */
+.scanlines {
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.08) 2px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+  pointer-events: none;
+}
+
+/* Share card (exported as image) */
+#share-card {
+  background: linear-gradient(180deg, #0d1b2a 0%, #071020 100%);
+}

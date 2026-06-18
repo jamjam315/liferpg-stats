@@ -480,12 +480,12 @@ export function buildResult(answers: number[]): RPGResult {
 
 // ステータス名の表示用マッピング
 export const STAT_LABELS: Record<StatKey, string> = {
-  STR: '力（STR）',
-  INT: '知力（INT）',
-  VIT: '体力（VIT）',
-  AGI: '素早さ（AGI）',
-  LUK: '運（LUK）',
-  CHA: '魅力（CHA）',
+  STR: 'ちから',
+  INT: 'かしこさ',
+  VIT: 'たいりょく',
+  AGI: 'すばやさ',
+  LUK: 'うんのよさ',
+  CHA: 'みりょく',
 }
 
 export const STAT_COLORS: Record<StatKey, string> = {

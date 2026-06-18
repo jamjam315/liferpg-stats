@@ -81,11 +81,15 @@ export default function QuizSection({ onComplete }: QuizSectionProps) {
         {/* 質問番号バッジ */}
         <div className="flex items-center gap-3 mb-5">
           <span
-            className="text-xs px-2 py-1 rounded"
+            className="px-2 py-1 rounded"
             style={{
               background: '#1a2a0a',
               border: '1px solid #c8a850',
               color: '#ffd700',
+              fontFamily: 'sans-serif',
+              fontSize: '13px',
+              fontWeight: 'bold',
+              letterSpacing: '0.05em',
             }}
           >
             Q{currentQ + 1}

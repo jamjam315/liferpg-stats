@@ -84,7 +84,7 @@ export default function StatusCard({ result, onRetry }: StatusCardProps) {
 
         <button
           onClick={() => {
-            const text = `【人生RPG ステータス診断】\n私の二つ名：「${result.title}」\n職業：${result.jobClass}（Lv.${result.level}）\nSTR:${result.stats.STR} INT:${result.stats.INT} VIT:${result.stats.VIT} AGI:${result.stats.AGI} LUK:${result.stats.LUK} CHA:${result.stats.CHA}\n#人生RPG #ステータス診断`
+            const text = `【人生RPG ステータス診断】\n私の二つ名：「${result.title}」\n職業：${result.jobClass}（Lv.${result.level}）\nちから:${result.stats.STR} かしこさ:${result.stats.INT} たいりょく:${result.stats.VIT} すばやさ:${result.stats.AGI} うんのよさ:${result.stats.LUK} みりょく:${result.stats.CHA}\n#人生RPG #ステータス診断\n\n▶ 無料で診断 → https://liferpg-stats.vercel.app\n作者：@MadTeaParty20`
             const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`
             window.open(url, '_blank')
           }}

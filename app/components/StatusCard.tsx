@@ -17,10 +17,10 @@ function StatBar({ statKey, value }: { statKey: string; value: number }) {
   return (
     <div className="mb-3">
       <div className="flex justify-between items-center mb-1">
-        <span className="text-rpg-dim" style={{ fontSize: '8px' }}>
+        <span style={{ fontSize: '13px', color: '#ffffff' }}>
           {label}
         </span>
-        <span style={{ fontSize: '8px', color }}>{value}</span>
+        <span style={{ fontSize: '13px', color }}>{value}</span>
       </div>
       <div className="stat-bar rounded-sm">
         <div
@@ -145,19 +145,19 @@ export default function StatusCard({ result, onRetry }: StatusCardProps) {
               style={{ borderBottom: '1px solid #2a3a2a' }}
             >
               <p
-                className="text-rpg-dim mb-1 tracking-widest"
-                style={{ fontSize: '7px' }}
+                className="text-center mb-4 pb-3 tracking-widest"
+                style={{ borderBottom: '1px solid #2a3a2a', fontSize: '12px', color: '#ffffff' }}
               >
                 ◆◆◆ 人生RPG ステータス診断 ◆◆◆
               </p>
-              <p className="text-rpg-gold" style={{ fontSize: '8px' }}>
+              <p className="text-center" style={{ fontSize: '12px', color: '#ffd700' }}>
                 2026 年 6 月 診断
               </p>
             </div>
 
             {/* 二つ名 */}
             <div className="text-center mb-5">
-              <p className="text-rpg-dim mb-2" style={{ fontSize: '7px' }}>
+              <p style={{ fontSize: '14px', color: '#ffffff', marginBottom: '8px' }}>
                 ─── 二つ名 ───
               </p>
               <h1
@@ -174,7 +174,7 @@ export default function StatusCard({ result, onRetry }: StatusCardProps) {
               style={{ borderBottom: '1px solid #2a3a2a' }}
             >
               <div className="text-center">
-                <p className="text-rpg-dim mb-1" style={{ fontSize: '7px' }}>
+                <p style={{ fontSize: '14px', color: '#ffffff', marginBottom: '4px' }}>
                   職業
                 </p>
                 <p className="text-rpg-text" style={{ fontSize: '9px' }}>
@@ -186,7 +186,7 @@ export default function StatusCard({ result, onRetry }: StatusCardProps) {
                 style={{ background: '#2a3a2a' }}
               />
               <div className="text-center">
-                <p className="text-rpg-dim mb-1" style={{ fontSize: '7px' }}>
+                <p style={{ fontSize: '14px', color: '#ffffff', marginBottom: '4px' }}>
                   LEVEL
                 </p>
                 <p
@@ -204,7 +204,7 @@ export default function StatusCard({ result, onRetry }: StatusCardProps) {
 
             {/* ステータスバー */}
             <div className="mb-5">
-              <p className="text-rpg-dim mb-3 text-center" style={{ fontSize: '7px' }}>
+              <p style={{ fontSize: '14px', color: '#ffffff', marginBottom: '12px', textAlign: 'center' }}>
                 ─── STATS ───
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6">
@@ -223,7 +223,7 @@ export default function StatusCard({ result, onRetry }: StatusCardProps) {
                 className="rounded p-3"
                 style={{ background: 'rgba(0,0,0,0.4)', border: '1px solid #2a4a2a' }}
               >
-                <p className="text-rpg-dim mb-2" style={{ fontSize: '9px' }}>
+                <p style={{ fontSize: '14px', color: '#ffffff', marginBottom: '8px' }}>
                   ⚔ 装備
                 </p>
                 <p className="text-rpg-text leading-loose" style={{ fontSize: '13px', lineHeight: '2' }}>
@@ -234,7 +234,7 @@ export default function StatusCard({ result, onRetry }: StatusCardProps) {
                 className="rounded p-3"
                 style={{ background: 'rgba(0,0,0,0.4)', border: '1px solid #4a1a1a' }}
               >
-                <p className="text-rpg-dim mb-2" style={{ fontSize: '9px' }}>
+                <p style={{ fontSize: '14px', color: '#ffffff', marginBottom: '8px' }}>
                   ☠ 弱点
                 </p>
                 <p
@@ -254,7 +254,7 @@ export default function StatusCard({ result, onRetry }: StatusCardProps) {
                 border: '1px solid #c8a850',
               }}
             >
-              <p className="text-rpg-dim mb-2" style={{ fontSize: '9px' }}>
+              <p style={{ fontSize: '14px', color: '#ffffff', marginBottom: '8px' }}>
                 💬 賢者の一言
               </p>
               <p

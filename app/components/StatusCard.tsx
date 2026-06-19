@@ -116,6 +116,24 @@ export default function StatusCard({ result, onRetry }: StatusCardProps) {
         </button>
       </div>
 
+      {/* 013への導線 */}
+      <div className="text-center mb-4">
+        <a
+          href="https://sbti-31.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            fontFamily: '"Press Start 2P", monospace',
+            fontSize: '8px',
+            color: '#74b9ff',
+            textDecoration: 'none',
+            lineHeight: '2',
+          }}
+        >
+          ▷ もう1つ：毒舌性格診断（31問）
+        </a>
+      </div>
+
       {/* ステータスカード本体（画像保存対象） */}
       <div id="share-card" ref={cardRef} className="rpg-window rounded-lg overflow-hidden">
         {/* 背景画像オーバーレイ */}
